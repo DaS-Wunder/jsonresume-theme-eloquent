@@ -266,11 +266,11 @@
                       {{#if startDate}}
                         <p class="visible-xs-block text-muted">
                           <small>
+			{{#if endDate}}
                             <time datetime="{{startDate}}">{{formatMMMMYYYY startDate}}</time>&nbsp;—&nbsp;
-                            {{#if endDate}}
-                              <time datetime="{{endDate}}">{{formatMMMMYYYY endDate}}</time>
-                            {{else}}
-                              <time>Present</time>
+                            <time datetime="{{endDate}}">{{formatMMMMYYYY endDate}}</time>
+                           {{else}}
+			   	<time datetime="{{startDate}}">seit {{formatMMMMYYYY startDate}}</time>&nbsp;—&nbsp;
                             {{/if}}
                             &nbsp;<span class="duration-counter"><i aria-hidden="true" class="icon-clock-o"></i>&nbsp;{{humaneDuration startDate endDate}}</span>
                           </small>
@@ -291,14 +291,14 @@
                     {{#if startDate}}
                       <div class="col-sm-3 detail-item-sidebar text-muted text-center hidden-xs">
                         <p>
+			{{#if endDate}}
                           <time datetime="{{startDate}}">{{formatMMMMYYYY startDate}}</time>
                           <br>
                           &nbsp;—&nbsp;
-                          {{#if endDate}}
-                            <br>
+                                                      <br>
                             <time datetime="{{endDate}}">{{formatMMMMYYYY endDate}}</time>
                           {{else}}
-                            <time>Present</time>
+			 	<time datetime="{{startDate}}">seit {{formatMMMMYYYY startDate}}</time>
                           {{/if}}
                         </p>
                         <p>
@@ -336,12 +336,12 @@
                       {{#if startDate}}
                         <p class="visible-xs-block text-muted">
                           <small>
+                            {{#if endDate}}
                             <time datetime="{{startDate}}">{{formatYYYY startDate}}</time>
                             &nbsp;—&nbsp;
-                            {{#if endDate}}
                               <time datetime="{{endDate}}">{{formatYYYY endDate}}</time>
                             {{else}}
-                              <time>Present</time>
+                            <time datetime="{{startDate}}">seit {{formatYYYY startDate}}</time>
                             {{/if}}
                             &nbsp;<span class="duration-counter"><i aria-hidden="true" class="icon-clock-o"></i>&nbsp;{{humaneDuration startDate endDate}}</span>
                           </small>
@@ -367,12 +367,12 @@
                     {{#if startDate}}
                       <div class="col-sm-3 detail-item-sidebar text-muted text-center hidden-xs">
                         <p>
+                          {{#if endDate}}
                           <time datetime="{{startDate}}">{{formatYYYY startDate}}</time>
                           &nbsp;—&nbsp;
-                          {{#if endDate}}
                             <time datetime="{{endDate}}">{{formatYYYY endDate}}</time>
                           {{else}}
-                            <time>Present</time>
+			  <time datetime="{{startDate}}">{{formatYYYY startDate}}</time>
                           {{/if}}
                         </p>
                         <p>
