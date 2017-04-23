@@ -1,5 +1,5 @@
 {
-  "name": "jsonresume-theme-eloquent",
+  "name": "jsonresume-theme-eloquent-ger",
   "version": "3.0.2",
   "description": "An eloquent JSON Resume theme: fluent, persuasive, for developers.",
   "author": "Thibaud Colas <thib@thib.me> (https://github.com/thibaudcolas)",
@@ -19,9 +19,9 @@
   "keywords": [
     "jsonresume",
     "jsonresume-theme",
-    "jsonresume-theme-eloquent",
-    "theme",
-    "eloquent",
+    "jsonresume-theme-eloquent-ger",
+    "ýtheme",
+    "eloquent-ger",
     "elegant",
     "resume",
     "cv",
