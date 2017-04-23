@@ -216,14 +216,15 @@
                     {{#if startDate}}
                       <div class="col-sm-3 detail-item-sidebar text-muted text-center hidden-xs">
                         <p>
+			{{#if endDate}}
                           <time datetime="{{startDate}}">{{formatMMMMYYYY startDate}}</time>
                           <br>
                           &nbsp;—&nbsp;
-                          {{#if endDate}}
                             <br>
                             <time datetime="{{endDate}}">{{formatMMMMYYYY endDate}}</time>
                           {{else}}
-                            <time>Present</time>
+                            <time datetime="{{startDate}}">seit {{formatMMMMYYYY startDate}}</time>
+			    <br>
                           {{/if}}
                         </p>
                         <p>
@@ -437,7 +438,7 @@
                       {{#if date}}
                         <p class="visible-xs-block text-muted">
                           <small>
-                            Awarded on:&nbsp;<time datetime="{{date}}">{{formatMMMDDYYYY date}}</time>
+                            Awarded on:&nbsp;<time datetime="{{date}}">{{formatMMMMDDYYYY date}}</time>
                           </small>
                         </p>
                       {{/if}}
@@ -489,7 +490,7 @@
 
                       {{#if releaseDate}}
                         <p class="visible-xs-block text-muted">
-                          <small>Published on:&nbsp;<time datetime="{{releaseDate}}" itemprop="datePublished">{{formatMMMDDYYYY releaseDate}}</time></small>
+                          <small>Published on:&nbsp;<time datetime="{{releaseDate}}" itemprop="datePublished">{{formatMMMMDDYYYY releaseDate}}</time></small>
                         </p>
                       {{/if}}
 
@@ -501,7 +502,7 @@
                         <p>
                           <strong>Published on:</strong>
                           <br>
-                          <time datetime="{{releaseDate}}" itemprop="datePublished">{{formatMMMDDYYYY releaseDate}}</time>
+                          <time datetime="{{releaseDate}}" itemprop="datePublished">{{formatMMMMDDYYYY releaseDate}}</time>
                         </p>
                       </div>
                     {{/if}}
